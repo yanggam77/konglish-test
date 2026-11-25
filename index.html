@@ -145,6 +145,7 @@
     </div>
     <p class="pill" style="margin-top:20px">10문제 · 2분</p>
     <h1>나의 콩글리시 지수<br>테스트</h1>
+    <p class="eb hidden" id="applyTitle" style="color:var(--orange);font-size:24px;margin:-2px 0 10px">+ 서평단 모집</p>
     <p class="eb" style="font-size:18px">이 말, 영어일까 콩글리시일까?</p>
     <div class="words"><span>캐리어</span><span>노트북</span><span>샤프</span><span>파이팅</span><span class="q">???</span></div>
     <p class="muted">미국에서 온 친구 코리에게 날마다 쓰는 말을 해 보세요.<br>코리가 고개를 갸웃할까요, 엄지를 척 들까요?</p>
@@ -444,7 +445,7 @@ function post(data){
 
 /* ───────── 시작 ───────── */
 const period = `${md(CONFIG.APPLY_LABEL)}~${md(CONFIG.APPLY_END)}`;
-if (applyOpen()) { $("#applyNotice").classList.remove("hidden"); $("#applyPeriod").textContent = `(${period})`; }
+if (applyOpen()) { $("#applyNotice").classList.remove("hidden"); $("#applyTitle").classList.remove("hidden"); $("#applyPeriod").textContent = `(${period})`; }
 $("#startBtn").onclick = () => {
   const box = $("#whoOpts"); box.innerHTML = "";
   WHO.forEach(w => { const b = document.createElement("button"); b.className = "opt"; b.type = "button";
