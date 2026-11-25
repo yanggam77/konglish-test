@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>나의 콩글리시 지수 테스트 | 파이팅은 영어로 유 캔 두 잇!</title>
+<meta name="description" content="캐리어, 노트북, 파이팅… 이 말, 영어일까 콩글리시일까? 10문제로 알아보는 나의 콩글리시 지수. 『파이팅은 영어로 유 캔 두 잇!』(사계절)">
+<meta property="og:title" content="나의 콩글리시 지수는 몇 %?">
+<meta property="og:description" content="이 말, 영어일까 콩글리시일까? 10문제로 알아보는 콩글리시 지수 테스트 | 『파이팅은 영어로 유 캔 두 잇!』(사계절)">
+<meta property="og:image" content="https://yanggam77.github.io/konglish-test/assets/og.jpg">
+<meta property="og:url" content="https://yanggam77.github.io/konglish-test/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  @font-face{font-family:"NSR";font-weight:400;src:url("fonts/nsr-r.woff2") format("woff2");font-display:swap}
+  @font-face{font-family:"NSR";font-weight:800;src:url("fonts/nsr-eb.woff2") format("woff2");font-display:swap}
+  :root{--yellow:#ffe14d;--yellow2:#fff4b8;--navy:#1f2a5a;--blue:#3c7be0;--orange:#ff7a2f;--green:#22a35a;--red:#e5484d;--gray:#7a809a;--line:#e6e2d3}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:"NSR",system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--navy);background:var(--yellow);
+       -webkit-text-size-adjust:100%;line-height:1.55;word-break:keep-all}
+  .wrap{max-width:520px;margin:0 auto;padding:18px 16px calc(28px + env(safe-area-inset-bottom))}
+  .card{background:#fff;border-radius:24px;padding:22px 20px;box-shadow:0 6px 0 rgba(31,42,90,.12);margin-bottom:16px}
+  h1,h2,h3,.eb{font-weight:800}
+  h1{font-size:30px;line-height:1.25;margin:6px 0 8px}
+  h2{font-size:21px;line-height:1.35;margin:0 0 10px}
+  p{margin:0 0 10px}
+  .muted{color:var(--gray);font-size:14px}
+  .small{font-size:13px}
+  .center{text-align:center}
+  .hidden{display:none!important}
+  button,.btn{font:inherit;font-weight:800;border:0;border-radius:16px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .btn{display:block;width:100%;padding:16px;font-size:18px;text-align:center;text-decoration:none;background:var(--navy);color:#fff;box-shadow:0 4px 0 #0e1640}
+  .btn:active{transform:translateY(2px);box-shadow:0 2px 0 #0e1640}
+  .btn.orange{background:var(--orange);box-shadow:0 4px 0 #c4541a}
+  .btn.blue{background:var(--blue);box-shadow:0 4px 0 #24529c}
+  .btn.white{background:#fff;color:var(--navy);box-shadow:0 0 0 2px var(--navy) inset}
+  .btn+.btn{margin-top:10px}
+  .row{display:flex;gap:10px}.row>*{flex:1}.row .btn+.btn{margin-top:0}
+  .pill{display:inline-block;background:var(--navy);color:#fff;border-radius:99px;padding:4px 12px;font-size:13px;font-weight:800}
+  .pill.y{background:var(--yellow);color:var(--navy)}
+  /* 시작 */
+  .hero{position:relative;text-align:center;padding-top:26px}
+  .hero .cover{width:46%;max-width:210px;border-radius:10px;box-shadow:0 8px 20px rgba(31,42,90,.25);transform:rotate(-4deg)}
+  .hero .kory{position:absolute;right:-6px;top:70px;width:34%;max-width:160px;animation:bob 2.4s ease-in-out infinite}
+  .hero .bok{position:absolute;left:-4px;top:110px;width:28%;max-width:130px;animation:bob 2.4s .6s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(-6px) rotate(-2deg)}}
+  .words{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:12px 0 4px}
+  .words span{background:var(--yellow2);border-radius:10px;padding:3px 10px;font-weight:800;font-size:15px}
+  .words span.q{background:#e8f0ff;color:var(--blue)}
+  .notice{background:var(--navy);color:#fff;border-radius:18px;padding:14px 16px;margin-bottom:16px;display:flex;gap:12px;align-items:center}
+  .notice b{color:var(--yellow)}
+  /* 문제 */
+  .top{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .bar{flex:1;height:12px;background:#fff;border-radius:99px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--orange);border-radius:99px;transition:width .3s}
+  .qnum{font-weight:800;font-size:15px;min-width:44px;text-align:right}
+  .qtag{display:inline-block;background:var(--yellow);border-radius:10px;padding:2px 10px;font-weight:800;margin-bottom:8px}
+  .qtext{font-size:19px;font-weight:800;line-height:1.5;margin-bottom:6px}
+  .qsent{background:#f5f7fc;border-radius:12px;padding:10px 12px;font-size:16px;margin:8px 0 4px}
+  .qsent b{color:var(--blue)}
+  .opts{display:grid;gap:10px;margin-top:14px}
+  .opts.two{grid-template-columns:1fr 1fr}
+  .opt{background:#fff;color:var(--navy);text-align:left;padding:15px 16px;font-size:17px;box-shadow:0 0 0 2px var(--line) inset;display:flex;align-items:center;gap:10px;min-height:56px}
+  .opts.two .opt{justify-content:center;font-size:22px;min-height:84px}
+  .opt .k{flex:none;width:28px;height:28px;border-radius:50%;background:var(--yellow2);display:grid;place-items:center;font-size:14px}
+  .opt:not([disabled]):active{box-shadow:0 0 0 3px var(--blue) inset}
+  .opt.right{box-shadow:0 0 0 3px var(--green) inset;background:#e9f8ef}
+  .opt.right .k{background:var(--green);color:#fff}
+  .opt.wrong{box-shadow:0 0 0 3px var(--red) inset;background:#fdecec}
+  .opt.wrong .k{background:var(--red);color:#fff}
+  .opt[disabled]{cursor:default}
+  .opt.dim{opacity:.45}
+  .fb{margin-top:16px;animation:pop .25s ease-out}
+  @keyframes pop{from{opacity:0;transform:translateY(8px)}}
+  .verdict{font-size:24px;font-weight:800;margin-bottom:8px}
+  .verdict.ok{color:var(--green)}.verdict.no{color:var(--red)}
+  .comic{width:100%;border-radius:14px;border:2px solid var(--line);display:block;cursor:zoom-in}
+  .say{position:relative;background:#e8f0ff;border-radius:16px;padding:10px 14px 10px 62px;margin:12px 0;min-height:54px;display:flex;align-items:center}
+  .say img{position:absolute;left:6px;bottom:0;width:50px}
+  .en{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;background:var(--yellow2);border-radius:14px;padding:10px 14px;margin:10px 0}
+  .en b{font-size:22px}
+  .en .pr{color:var(--gray);font-size:14px}
+  .en .lbl{width:100%;font-size:13px;font-weight:800;color:#a07b00}
+  .page{color:var(--gray);font-size:13px}
+  .more{background:none;color:var(--blue);padding:6px 0;font-size:15px}
+  /* 결과 */
+  .score{font-size:64px;font-weight:800;line-height:1;color:var(--orange)}
+  .score small{font-size:28px}
+  .tname{font-size:26px;font-weight:800;line-height:1.3;margin:8px 0}
+  .timg{width:58%;max-width:240px;display:block;margin:6px auto 4px}
+  .timg.wide{width:92%;max-width:440px}
+  .marks{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}
+  .mark{border-radius:12px;padding:8px 2px;text-align:center;font-size:13px;font-weight:800;background:#e9f8ef;color:var(--green);border:0;font-family:inherit}
+  .mark.x{background:#fdecec;color:var(--red)}
+  .mark span{display:block;font-size:20px;line-height:1.1}
+  .review{margin-top:12px;border-top:2px dashed var(--line);padding-top:12px}
+  .cta{background:var(--navy);color:#fff}
+  .cta h2{color:var(--yellow)}
+  .cta ul{margin:6px 0 14px;padding-left:20px}
+  .cta li{margin:2px 0}
+  /* 신청서 */
+  label.f{display:block;font-weight:800;margin:14px 0 6px;font-size:15px}
+  label.f em{color:var(--red);font-style:normal}
+  input[type=text],input[type=tel],input[type=email],input[type=url],select,textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--navy)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+  textarea{min-height:84px;resize:vertical}
+  .seg{display:flex;gap:8px}.seg label{flex:1}
+  .seg input{position:absolute;opacity:0}
+  .seg span{display:block;text-align:center;padding:12px 6px;border-radius:12px;box-shadow:0 0 0 2px var(--line) inset;font-weight:800;cursor:pointer}
+  .seg input:checked+span{background:var(--navy);color:#fff;box-shadow:none}
+  .agree{background:#f7f7fb;border-radius:14px;padding:12px 14px;margin-top:14px;font-size:14px}
+  .agree table{width:100%;border-collapse:collapse;margin:6px 0;font-size:13px}
+  .agree th,.agree td{border:1px solid var(--line);padding:5px 6px;text-align:left;vertical-align:top}
+  .agree th{background:#fff;width:28%}
+  .chk{display:flex;gap:10px;align-items:flex-start;margin-top:10px;font-weight:800;font-size:15px;cursor:pointer}
+  .chk input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--navy)}
+  .err{color:var(--red);font-size:14px;font-weight:800;margin-top:10px}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  footer{text-align:center;color:#6b5f1f;font-size:12px;padding:6px 0 0}
+  footer a{color:inherit}
+  /* 크게 보기 */
+  .modal{position:fixed;inset:0;background:rgba(15,20,45,.86);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;z-index:10}
+  .modal img{max-width:100%;max-height:78vh;border-radius:12px;background:#fff}
+  .modal .mtxt{color:#fff;margin:12px 0 8px;text-align:center;font-weight:800}
+  .modal .row{width:100%;max-width:420px}
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 18px;border-radius:99px;font-weight:800;z-index:20;font-size:15px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ① 시작 -->
+<section id="sStart">
+  <div class="notice hidden" id="applyNotice">
+    <div style="font-size:30px">📚</div>
+    <div class="small"><b>보호자·선생님 서평단 20분 모집 중!</b><br>테스트를 끝까지 풀면 결과 화면에서 신청할 수 있어요. <span id="applyPeriod"></span></div>
+  </div>
+  <div class="card center">
+    <div class="hero">
+      <img class="bok" src="assets/bokhee.png" alt="">
+      <img class="cover" src="assets/cover.jpg" alt="파이팅은 영어로 유 캔 두 잇! 표지">
+      <img class="kory" src="assets/kory.png" alt="">
+    </div>
+    <p class="pill" style="margin-top:20px">10문제 · 2분</p>
+    <h1>나의 콩글리시 지수<br>테스트</h1>
+    <p class="eb" style="font-size:18px">이 말, 영어일까 콩글리시일까?</p>
+    <div class="words"><span>캐리어</span><span>노트북</span><span>샤프</span><span>파이팅</span><span class="q">???</span></div>
+    <p class="muted">미국에서 온 친구 코리에게 날마다 쓰는 말을 해 보세요.<br>코리가 고개를 갸웃할까요, 엄지를 척 들까요?</p>
+    <button class="btn orange" id="startBtn" style="margin-top:14px">테스트 시작하기</button>
+    <p class="muted small" style="margin-top:12px">어린이 혼자서도, 가족과 함께 풀어도 좋아요.<br>테스트에서는 이름이나 연락처를 묻지 않아요.</p>
+  </div>
+</section>
+
+<!-- ①-2 누가 풀고 있나요 -->
+<section id="sWho" class="hidden">
+  <div class="card center">
+    <img src="assets/kory.png" alt="" style="width:34%;max-width:150px">
+    <h2 style="margin-top:6px">Hi! 누가 풀고 있나요?</h2>
+    <p class="muted small">학년별로 어떤 콩글리시가 헷갈리는지 알아보려고 해요.<br>이름은 묻지 않아요.</p>
+    <div class="opts" id="whoOpts" style="grid-template-columns:1fr 1fr"></div>
+  </div>
+</section>
+
+<!-- ② 문제 -->
+<section id="sQuiz" class="hidden">
+  <div class="top"><div class="bar"><i id="barFill"></i></div><div class="qnum" id="qNum">1/10</div></div>
+  <div class="card">
+    <span class="qtag" id="qTag"></span>
+    <div class="qtext" id="qText"></div>
+    <div class="qsent hidden" id="qSent"></div>
+    <div class="opts" id="opts"></div>
+    <div class="fb hidden" id="fb">
+      <div class="verdict" id="verdict"></div>
+      <img class="comic" id="fbComic" alt="책 속 코리의 오해 장면">
+      <p class="muted small center" style="margin:4px 0 0">그림을 누르면 크게 볼 수 있어요</p>
+      <div class="say"><img src="assets/kory.png" alt=""><span id="fbKory"></span></div>
+      <p id="fbWhy"></p>
+      <div class="en"><span class="lbl">진짜 영어</span><b id="fbEn"></b><span class="pr" id="fbPr"></span></div>
+      <div class="row" style="align-items:center"><span class="page" id="fbPage"></span><button class="more" id="noteBtn" style="text-align:right">복희의 필기 보기 ›</button></div>
+      <button class="btn" id="nextBtn" style="margin-top:12px">다음 문제</button>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 결과 -->
+<section id="sResult" class="hidden">
+  <div class="card center">
+    <span class="pill y">나의 콩글리시 지수</span>
+    <div class="score" style="margin-top:12px"><span id="rIndex">0</span><small>%</small></div>
+    <p class="muted" id="rScore" style="margin-top:6px"></p>
+    <img class="timg" id="rImg" alt="">
+    <div class="tname" id="rName"></div>
+    <p id="rDesc"></p>
+    <div class="say" style="text-align:left"><img src="assets/kory.png" alt=""><span id="rKory"></span></div>
+    <div class="row" style="margin-top:14px">
+      <button class="btn blue" id="saveBtn">📸 결과 저장</button>
+      <button class="btn white" id="shareBtn">🔗 공유하기</button>
+    </div>
+  </div>
+
+  <div class="card cta hidden" id="applyCta">
+    <h2>📚 보호자·선생님 서평단 모집</h2>
+    <p>방금 푼 콩글리시들이 책에 다 있어요! 아이와 함께 읽고 서평을 남겨 주실 <b style="color:var(--yellow)">20분</b>을 찾습니다.</p>
+    <ul class="small">
+      <li>모집: <span id="ctaPeriod"></span></li>
+      <li>대상: 초등 3~6학년 자녀를 둔 보호자, 초등 선생님 20분</li>
+      <li>발표: 12월 1일(화) 선정된 분께 개별 문자</li>
+      <li>서평: 12월 14일(월)까지 개인 SNS에 올리기</li>
+    </ul>
+    <button class="btn orange" id="applyBtn">서평단 신청하기</button>
+    <p class="small" style="margin:10px 0 0;opacity:.8">어린이는 보호자와 함께 신청해 주세요.</p>
+  </div>
+  <div class="card center hidden" id="applyClosed">
+    <p class="eb" style="margin:0">서평단 모집은 끝났어요. 신청해 주셔서 고맙습니다!</p>
+  </div>
+
+  <div class="card">
+    <h2>문제 다시 보기</h2>
+    <p class="muted small" style="margin:0">번호를 누르면 정답과 책 속 장면을 다시 볼 수 있어요.</p>
+    <div class="marks" id="marks"></div>
+    <div class="review hidden" id="review"></div>
+  </div>
+
+  <div class="card" id="eventCard">
+    <h2>🏠 우리 집 콩글리시 찾기</h2>
+    <p id="eventText"></p>
+    <a class="btn white" id="instaLink" target="_blank" rel="noopener">사계절 인어 인스타그램 가기</a>
+  </div>
+
+  <div class="card center">
+    <img src="assets/cover.jpg" alt="" style="width:110px;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.15)">
+    <p class="eb" style="margin:10px 0 2px">『파이팅은 영어로 유 캔 두 잇!』</p>
+    <p class="muted small">손지은 글 · 이창우 그림 · 사계절 · 슬기사전 17<br>미국 친구 코리의 2주 홈스테이 속 콩글리시 45개와 진짜 영어</p>
+    <a class="btn" id="bookLink" target="_blank" rel="noopener">책 자세히 보기</a>
+    <button class="btn white" id="retryBtn">다시 풀기</button>
+  </div>
+</section>
+
+<!-- ④ 서평단 신청 -->
+<section id="sApply" class="hidden">
+  <div class="card">
+    <button class="more" id="backBtn">‹ 결과로 돌아가기</button>
+    <h2 style="margin-top:6px">서평단 신청</h2>
+    <p class="small">아이와 함께 책을 읽고, 아래 세 가지를 담아 서평을 남겨 주세요.</p>
+    <ol class="small" style="padding-left:20px;margin:0 0 4px">
+      <li>아이가 가장 크게 웃은 장면 하나</li>
+      <li>콩글리시 지수 테스트 결과 (결과 저장 그림 활용)</li>
+      <li>우리 집에서 쓰는 콩글리시 하나</li>
+    </ol>
+    <form id="applyForm" novalidate>
+      <label class="f">신청하시는 분 <em>*</em></label>
+      <div class="seg">
+        <label><input type="radio" name="role" value="보호자" checked><span>보호자</span></label>
+        <label><input type="radio" name="role" value="교사"><span>초등 선생님</span></label>
+      </div>
+      <label class="f" for="fName">성함 <em>*</em></label>
+      <input type="text" id="fName" name="name" autocomplete="name" maxlength="30">
+      <label class="f" for="fPhone">휴대폰 번호 <em>*</em> <span class="muted small">(선정 안내 문자)</span></label>
+      <input type="tel" id="fPhone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="010-0000-0000" maxlength="13">
+      <label class="f" for="fEmail">이메일 <em>*</em></label>
+      <input type="email" id="fEmail" name="email" autocomplete="email" maxlength="80">
+      <label class="f" for="fAddr">책 받으실 주소 <em>*</em> <span class="muted small">(우편번호 포함)</span></label>
+      <input type="text" id="fAddr" name="address" autocomplete="street-address" maxlength="200" placeholder="(우편번호) 시·구·동, 상세 주소">
+      <label class="f" for="fGrade" id="gradeLabel">자녀 학년 <em>*</em></label>
+      <select id="fGrade" name="grade"></select>
+      <label class="f" for="fChannel">서평 올릴 곳 <em>*</em></label>
+      <select id="fChannel" name="channel">
+        <option value="">고르세요</option><option>인스타그램</option><option>네이버 블로그</option><option>기타 블로그·카페</option>
+      </select>
+      <label class="f" for="fAccount">계정 또는 블로그 주소 <em>*</em></label>
+      <input type="text" id="fAccount" name="account" maxlength="200" placeholder="@아이디 또는 https://">
+      <label class="f" for="fFollow">팔로워·이웃 수 <em>*</em></label>
+      <select id="fFollow" name="followers">
+        <option value="">고르세요</option><option>100명 미만</option><option>100~500명</option><option>500~1,000명</option><option>1,000~5,000명</option><option>5,000명 이상</option>
+      </select>
+      <label class="f" for="fReason">신청 이유 <span class="muted small">(선택)</span></label>
+      <textarea id="fReason" name="reason" maxlength="500" placeholder="예) 아이가 '파이팅'이 영어가 아니라는 말에 깜짝 놀랐어요!"></textarea>
+      <div class="hp" aria-hidden="true"><label>웹사이트<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="agree">
+        <b>개인 정보 수집·이용 안내</b>
+        <table>
+          <tr><th>수집 항목</th><td>성함, 휴대폰 번호, 이메일, 주소, 자녀 학년(담당 학년), SNS 계정 주소</td></tr>
+          <tr><th>이용 목적</th><td>서평단 선정, 도서 발송, 선정·서평 안내 연락</td></tr>
+          <tr><th>보관 기간</th><td id="keepUntil">서평단 활동 종료 후 파기(2027년 1월 31일까지)</td></tr>
+        </table>
+        <p class="small" style="margin:0">동의하지 않으실 수 있으며, 동의하지 않으면 서평단 신청이 어렵습니다. 만 14세 미만 어린이의 개인 정보는 받지 않습니다.</p>
+        <label class="chk"><input type="checkbox" id="agreePrivacy"> 개인 정보 수집·이용에 동의합니다. (필수)</label>
+        <label class="chk"><input type="checkbox" id="agreeNotice"> 작성한 서평 글은 책 홍보에 활용될 수 있습니다. (사진은 사용하지 않습니다) (필수)</label>
+      </div>
+      <div class="err hidden" id="formErr"></div>
+      <button class="btn orange" type="submit" id="submitBtn" style="margin-top:16px">신청하기</button>
+    </form>
+  </div>
+</section>
+
+<!-- ⑤ 신청 완료 -->
+<section id="sDone" class="hidden">
+  <div class="card center">
+    <img src="assets/kory.png" alt="" style="width:46%;max-width:200px">
+    <h2 style="margin-top:8px">신청이 완료되었어요!</h2>
+    <p>Thank you! 12월 1일(화)에 선정되신 분께<br>문자로 안내해 드릴게요.</p>
+    <p class="muted small" id="dupMsg"></p>
+    <button class="btn" id="doneBack">결과 화면으로 돌아가기</button>
+  </div>
+</section>
+
+<footer>
+  그림: 『파이팅은 영어로 유 캔 두 잇!』(손지은 글·이창우 그림, 사계절) · © 사계절출판사
+</footer>
+</div>
+
+<div class="modal hidden" id="modal">
+  <img id="modalImg" alt="">
+  <div class="mtxt hidden" id="modalTxt">이미지를 길게 눌러 저장하거나 아래 버튼을 눌러 주세요</div>
+  <div class="row" style="margin-top:6px">
+    <a class="btn blue hidden" id="modalDown" download="나의-콩글리시-지수.png">저장하기</a>
+    <button class="btn white" id="modalClose">닫기</button>
+  </div>
+</div>
+<canvas id="cv" width="1080" height="1350" class="hidden"></canvas>
+
+<script>
+/* ───────── 설정: 공개 전에 여기만 바꾸세요 ───────── */
+const CONFIG = {
+  SCRIPT_URL: "https://script.google.com/macros/s/AKfycbwJWtDF-Zd0V27fWDjYdRv0v_OXpm3bhSx3jqvjw54UsODcYSnLojkSJ1dOcqLy03aZ9g/exec",                                   // 구글 Apps Script 웹 앱 주소(…/exec). 비어 있으면 시트로 보내지 않음
+  SITE_URL: "https://yanggam77.github.io/konglish-test/",
+  BOOK_URL: "https://www.sakyejul.net/",
+  INSTA_URL: "https://www.instagram.com/ineo_kids/",
+  APPLY_START: "2026-11-25T00:00:00+09:00",       // 신청 버튼이 보이기 시작하는 때(공개 전 확인을 위해 하루 앞당김)
+  APPLY_LABEL: "2026-11-26T00:00:00+09:00",       // 화면에 안내하는 모집 시작일
+  APPLY_END:   "2026-11-30T23:59:59+09:00",
+  EVENT_START: "2026-12-07T00:00:00+09:00",
+  EVENT_END:   "2026-12-20T23:59:59+09:00",
+};
+/* 주소 끝에 ?test=1 을 붙여 열면 시트에 '테스트'로 표시되어 정답률 계산에서 빠집니다. */
+
+/* ───────── 문항: 순서를 바꾸면 Code.gs 의 QUESTIONS 도 같이 바꾸세요 ───────── */
+const QUESTIONS = [
+  {ko:"파이팅", ch:23, page:58,
+   q:"내일 발표하는 코리를 응원해 주고 싶어요. 영어로 뭐라고 말할까요?",
+   opts:["You can do it!","Fighting!","Let's fight!","Hand power!"],
+   kory:"“발표 fighting? 갑자기 웬 싸움 이야기지?”",
+   why:"영어 fighting은 ‘싸움’이라는 뜻이라 응원하는 말로는 어울리지 않아요. 응원할 때는 ‘넌 할 수 있어!’라는 뜻의 You can do it!이라고 해요.",
+   en:"You can do it!", pr:"유 캔 두 잇"},
+  {ko:"아파트", ch:3, page:18,
+   q:"복희가 “나는 아파트에 살아.”라고 하자, 코리가 갑자기 떨어져 앉았어요. 코리는 ‘아파트’를 무슨 말로 알아들었을까요?",
+   opts:["apart (따로, 떨어져)","a party (파티)","a pot (냄비)","upstairs (위층)"],
+   kory:"“아파트? apart…?” (슬금슬금 떨어져 앉는 코리)",
+   why:"영어 apart는 ‘따로, 떨어져’라는 뜻이에요. 우리가 사는 아파트는 영어로 줄이지 않고 apartment라고 해요.",
+   en:"apartment", pr:"어파트먼트"},
+  {ko:"노트북", ch:4, page:20,
+   q:"화면이 큰 컴퓨터가 필요한 코리에게 “내 노트북 쓸래?”라고 묻고 싶어요.",
+   sent:"Do you want to use my <b>____</b>?",
+   opts:["laptop","notebook","note computer","book PC"],
+   kory:"“notebook? 나도 있어.”",
+   why:"영어 notebook은 보통 ‘공책’이에요. 휴대용 컴퓨터는 무릎(lap) 위(top)에 올려놓고 쓴다고 해서 laptop이라고 해요.",
+   en:"laptop", pr:"랩탑"},
+  {ko:"샤프", ch:25, page:62,
+   q:"“선생님이 샤프 말고 연필을 쓰라고 하셨어.” 여기서 ‘샤프’를 영어로 하면?",
+   opts:["mechanical pencil","sharp","sharp pen","pencil machine"],
+   kory:"“샤프? 샤프가 뭐야?”",
+   why:"영어 sharp는 ‘날카로운, 뾰족한’이라는 뜻이에요. 가는 심을 넣어 쓰는 샤프는 mechanical pencil이라고 해요.",
+   en:"mechanical pencil", pr:"머캐니컬 펜슬"},
+  {ko:"핸드폰", ch:21, page:54,
+   q:"수업이 시작되기 전, 코리에게 “핸드폰 꺼야 해.”라고 알려 주려면?",
+   sent:"You have to turn off your <b>____</b>.",
+   opts:["smartphone","hand phone","hand call","phone hand"],
+   kory:"“핸드폰이 뭐지? 아, smartphone!”",
+   why:"핸드폰은 손(hand)과 전화기(phone)를 합쳐 만든 콩글리시예요. 영어로는 cell phone이라고 하고, 스마트폰은 그대로 smartphone이라고 해요.",
+   en:"cell phone / smartphone", pr:"셀 폰 / 스마트폰"},
+  {ko:"린스", ch:8, page:28,
+   q:"코리에게 욕실을 안내하는 복희. “이건 샴푸, 그리고 이게 린스야!” 린스를 영어로 하면?",
+   opts:["conditioner","rinse","hair soft","shampoo two"],
+   kory:"“응? 헹구는 게 린스라고?”",
+   why:"영어 rinse는 ‘물로 헹구다’라는 뜻이에요. 샴푸 뒤에 바르는 린스는 영어로 conditioner라고 해요.",
+   en:"conditioner", pr:"컨디셔너"},
+  {ko:"원 플러스 원", ch:19, page:50,
+   q:"가게에서 음료수가 ‘원 플러스 원’이래요! 하나 사면 하나 더 준다는 걸 코리에게 영어로 알려 주려면?",
+   sent:"It's <b>____</b>.",
+   opts:["buy one, get one free","one plus one","one and one more","double one"],
+   kory:"“원 플러스 원? 쉬워. 1 더하기 1은 2야!”",
+   why:"‘원 플러스 원(1+1)’은 콩글리시예요. 영어로는 하나를 사면(buy one) 하나를 공짜로 얻는다(get one free)는 뜻으로 buy one, get one free라고 해요. 머리글자만 따서 BOGO라고 줄여 쓰기도 해요.",
+   en:"buy one, get one free", pr:"바이 원, 겟 원 프리"},
+  {ko:"커닝", ch:35, page:82,
+   q:"시험 시간에 “커닝하면 안 돼!”를 영어로 하면?",
+   opts:["No cheating!","No cunning!","No eye shopping!","No look-look!"],
+   kory:"“cunning? 아, cheating!”",
+   why:"영어 cunning은 ‘교활한’이라는 뜻이에요. 시험에서 답을 베끼는 부정행위는 cheating이라고 해요.",
+   en:"No cheating!", pr:"노 치팅"},
+  {ko:"러닝머신", ch:12, page:36,
+   q:"“미국에도 러닝머신 있어?” 코리는 로봇처럼 달리는 기계를 상상했어요. 러닝머신을 영어로 하면?",
+   opts:["treadmill","running machine","run belt","walking robot"],
+   kory:"“running machine? 기계가 달린다고? 로봇처럼 달리는 기계인가?”",
+   why:"러닝머신은 영어처럼 보이지만 콩글리시예요. 실내에서 걷거나 뛰는 운동 기구는 treadmill이라고 해요.",
+   en:"treadmill", pr:"트레드밀"},
+  {ko:"스카프", ch:16, page:44, ox:true,
+   q:"마지막 문제! “난 scarf를 살 거야.” 코리는 겨울 목도리를 사려는 거였어요. 영어 scarf는 얇은 스카프뿐 아니라 목도리까지 가리키는 말이다?",
+   opts:["⭕","❌"],
+   kory:"“저거 말고, 겨울에 하는 scarf!”",
+   why:"함정 문제였어요! 스카프는 콩글리시가 아니라 영어로도 그대로 통해요. 다만 영어 scarf는 목에 두르는 것을 모두 가리켜서, 겨울 목도리도 scarf라고 해요.",
+   en:"scarf", pr:"스카프"},
+];
+
+/* ───────── 결과 유형 (맞힌 개수 기준) ───────── */
+const TYPES = [
+  {min:0, max:3, name:"K-콩글리시 원어민", img:"assets/bokhee.png",
+   desc:"한국에서는 완벽하게 통하는 언어 실력자! 그런데 비행기를 타는 순간… 주변 사람들이 코리처럼 고개를 갸웃하기 시작해요. 걱정 마세요, 복희도 여기서 출발했어요.",
+   kory:"“캐리어? 노트북? 매직? 이거 혹시 비밀 암호야?”"},
+  {min:4, max:6, name:"반반 치킨형 하이브리드", img:"assets/kory.png",
+   desc:"영어 반, 콩글리시 반! 양념 반 후라이드 반처럼 둘 다 자신 있게 쓰는 타입이에요. 어느 쪽이 진짜 영어인지 구별만 하면 바로 한 단계 위로!",
+   kory:"“반은 알아듣겠어! 나머지 반은… 갸웃?”"},
+  {min:7, max:9, name:"눈치 백 단 콩글리시 탐정", img:"assets/mari.png",
+   desc:"수상한 영어를 귀신같이 잡아내는 명탐정! 아깝게 놓친 단서는 책 속 ‘복희의 필기’에 숨어 있어요.",
+   kory:"“와, 거의 다 맞혔어! 혹시 미국에서 살다 왔어?”"},
+  {min:10, max:10, name:"코리도 엄지척! 진짜 영어 고수", img:"assets/trio.png",
+   desc:"10문제 모두 정답! You can do it!을 넘어 이미 You did it! 이제 우리 집에 숨은 콩글리시를 찾아 줄 차례예요.",
+   kory:"“Wow! 너랑 이야기하면 고개 갸웃할 일이 없겠다!”"},
+];
+
+/* ───────── 상태 ───────── */
+const $ = s => document.querySelector(s);
+const params = new URLSearchParams(location.search);
+const IS_TEST = params.has("test");
+const REF = (params.get("ref") || params.get("utm_source") || (document.referrer ? new URL(document.referrer).hostname : "")).slice(0,60);
+const SID = (() => { try { let s = localStorage.getItem("kgl_sid"); if (!s) { s = (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36)+Math.random().toString(36).slice(2)); localStorage.setItem("kgl_sid", s); } return s; } catch(_) { return "x"+Math.random().toString(36).slice(2); } })();
+let order = [], idx = 0, answers = [], startedAt = 0, result = null, who = "";
+const WHO = ["초등 1~2학년","초등 3학년","초등 4학년","초등 5학년","초등 6학년","보호자","선생님","그 밖에"];
+const now = () => new Date();
+const inRange = (a,b) => now() >= new Date(a) && now() <= new Date(b);
+const applyOpen = () => inRange(CONFIG.APPLY_START, CONFIG.APPLY_END);
+const md = d => { const x = new Date(d); return `${x.getMonth()+1}월 ${x.getDate()}일(${"일월화수목금토"[x.getDay()]})`; };
+
+function show(id){ ["#sStart","#sWho","#sQuiz","#sResult","#sApply","#sDone"].forEach(s => $(s).classList.toggle("hidden", s !== id)); window.scrollTo(0,0); }
+function shuffle(a){ a = a.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function toast(t){ const el=document.createElement("div"); el.className="toast"; el.textContent=t; document.body.appendChild(el); setTimeout(()=>el.remove(),2200); }
+function post(data){
+  if (!CONFIG.SCRIPT_URL) return Promise.resolve({ok:false, error:"no-url"});
+  return fetch(CONFIG.SCRIPT_URL, {method:"POST", body:JSON.stringify(data), keepalive:true})
+    .then(r => r.json()).catch(e => ({ok:false, error:"network"}));
+}
+
+/* ───────── 시작 ───────── */
+const period = `${md(CONFIG.APPLY_LABEL)}~${md(CONFIG.APPLY_END)}`;
+if (applyOpen()) { $("#applyNotice").classList.remove("hidden"); $("#applyPeriod").textContent = `(${period})`; }
+$("#startBtn").onclick = () => {
+  const box = $("#whoOpts"); box.innerHTML = "";
+  WHO.forEach(w => { const b = document.createElement("button"); b.className = "opt"; b.type = "button";
+    b.style.justifyContent = "center"; b.textContent = w; b.onclick = () => { who = w; beginQuiz(); }; box.appendChild(b); });
+  show("#sWho");
+};
+function beginQuiz(){
+  answers = []; idx = 0; startedAt = Date.now();
+  order = QUESTIONS.map((q,i) => ({...q, i, shown: q.ox ? q.opts.slice() : shuffle(q.opts)}));
+  show("#sQuiz"); renderQ();
+}
+
+/* ───────── 문제 ───────── */
+function renderQ(){
+  const q = order[idx];
+  $("#barFill").style.width = (idx/QUESTIONS.length*100) + "%";
+  $("#qNum").textContent = `${idx+1}/${QUESTIONS.length}`;
+  $("#qTag").textContent = `Q${idx+1}. ${q.ko}`;
+  $("#qText").textContent = q.q;
+  $("#qSent").classList.toggle("hidden", !q.sent); $("#qSent").innerHTML = q.sent || "";
+  const box = $("#opts"); box.innerHTML = ""; box.className = "opts" + (q.ox ? " two" : "");
+  q.shown.forEach((o,k) => {
+    const b = document.createElement("button"); b.className = "opt"; b.type = "button";
+    b.innerHTML = q.ox ? o : `<span class="k">${"ABCD"[k]}</span><span></span>`;
+    if (!q.ox) b.lastChild.textContent = o;
+    b.onclick = () => pick(b, o);
+    box.appendChild(b);
+  });
+  $("#fb").classList.add("hidden");
+  $("#nextBtn").textContent = idx === QUESTIONS.length-1 ? "결과 보기" : "다음 문제";
+}
+function pick(btn, o){
+  const q = order[idx], ok = o === q.opts[0];
+  answers[idx] = ok ? "O" : o.replace(/\s*\(.+\)$/,"");
+  [...$("#opts").children].forEach((b,k) => {
+    b.disabled = true;
+    if (q.shown[k] === q.opts[0]) b.classList.add("right");
+    else if (b === btn) b.classList.add("wrong");
+    else b.classList.add("dim");
+  });
+  $("#verdict").textContent = ok ? "정답이에요! 🎉" : "아쉬워요! 😅";
+  $("#verdict").className = "verdict " + (ok ? "ok" : "no");
+  fillExplain(q, "#fbComic", "#fbKory", "#fbWhy", "#fbEn", "#fbPr", "#fbPage");
+  $("#noteBtn").onclick = () => openModal(`assets/k${String(q.i+1).padStart(2,"0")}.jpg`);
+  $("#fb").classList.remove("hidden");
+  setTimeout(() => $("#fb").scrollIntoView({behavior:"smooth", block:"start"}), 60);
+}
+function fillExplain(q, comic, kory, why, en, pr, page){
+  const n = String(q.i+1).padStart(2,"0");
+  const c = $(comic); c.src = `assets/c${n}.jpg`; c.onclick = () => openModal(c.src);
+  $(kory).textContent = q.kory; $(why).textContent = q.why; $(en).textContent = q.en;
+  $(pr).textContent = `[${q.pr}]`; $(page).textContent = `책 ${q.page}쪽 · ${q.ch}번째 콩글리시`;
+}
+$("#nextBtn").onclick = () => { idx++; if (idx < QUESTIONS.length) { renderQ(); window.scrollTo(0,0); } else finish(); };
+
+/* ───────── 결과 ───────── */
+function finish(){
+  const score = answers.filter(a => a === "O").length;
+  const t = TYPES.find(t => score >= t.min && score <= t.max);
+  let attempt = 1; try { attempt = (+localStorage.getItem("kgl_attempt") || 0) + 1; localStorage.setItem("kgl_attempt", attempt); } catch(_){}
+  result = {score, t, index:(QUESTIONS.length-score)*10};
+  $("#rIndex").textContent = result.index;
+  $("#rScore").textContent = `10문제 중 ${score}문제 정답`;
+  $("#rImg").src = t.img; $("#rImg").classList.toggle("wide", t.img.includes("trio")); $("#rName").textContent = t.name; $("#rDesc").textContent = t.desc; $("#rKory").textContent = t.kory;
+  const marks = $("#marks"); marks.innerHTML = "";
+  QUESTIONS.forEach((q,i) => {
+    const m = document.createElement("button"); const ok = answers[i] === "O";
+    m.className = "mark" + (ok ? "" : " x"); m.innerHTML = `<span>${ok?"⭕":"❌"}</span>${q.ko}`;
+    m.onclick = () => showReview(i); marks.appendChild(m);
+  });
+  $("#review").classList.add("hidden");
+  $("#applyCta").classList.toggle("hidden", !applyOpen());
+  $("#applyClosed").classList.toggle("hidden", applyOpen() || now() < new Date(CONFIG.APPLY_START));
+  $("#ctaPeriod").textContent = period;
+  $("#eventText").textContent = inRange(CONFIG.EVENT_START, CONFIG.EVENT_END)
+    ? `지금 진행 중! 우리 집에서 쓰는 콩글리시를 인어 인스타그램에 알려 주세요. (${md(CONFIG.EVENT_START)}~${md(CONFIG.EVENT_END)})`
+    : now() < new Date(CONFIG.EVENT_START)
+      ? `“엄마는 구경만 하는 걸 ‘아이쇼핑’이라고 해요!” 우리 집 콩글리시를 찾아 주세요. ${md(CONFIG.EVENT_START)}부터 인어 인스타그램에서 이벤트가 열려요.`
+      : "우리 집에도 콩글리시가 숨어 있을지 몰라요. 가족과 함께 찾아보세요!";
+  show("#sResult");
+  post({type:"result", sid:SID, attempt, test:IS_TEST, score, typeName:t.name, answers,
+        seconds:Math.round((Date.now()-startedAt)/1000), who, ref:REF, device:/Mobi|Android|iPhone/i.test(navigator.userAgent)?"모바일":"PC"});
+}
+function showReview(i){
+  const q = {...QUESTIONS[i], i}, ok = answers[i] === "O", r = $("#review");
+  r.innerHTML = `<p class="eb" style="margin:0 0 8px">Q${i+1}. ${q.ko} — <span style="color:var(--${ok?"green":"red"})">${ok?"정답":"오답"}</span></p>
+    <img class="comic" id="rvComic" alt=""><div class="say"><img src="assets/kory.png" alt=""><span id="rvKory"></span></div>
+    <p id="rvWhy"></p><div class="en"><span class="lbl">진짜 영어</span><b id="rvEn"></b><span class="pr" id="rvPr"></span></div>
+    <div class="row" style="align-items:center"><span class="page" id="rvPage"></span><button class="more" id="rvNote" style="text-align:right">복희의 필기 보기 ›</button></div>`;
+  fillExplain(q, "#rvComic", "#rvKory", "#rvWhy", "#rvEn", "#rvPr", "#rvPage");
+  $("#rvNote").onclick = () => openModal(`assets/k${String(i+1).padStart(2,"0")}.jpg`);
+  r.classList.remove("hidden"); r.scrollIntoView({behavior:"smooth", block:"start"});
+}
+$("#retryBtn").onclick = () => beginQuiz();
+$("#bookLink").href = CONFIG.BOOK_URL; $("#instaLink").href = CONFIG.INSTA_URL;
+
+/* 공유 */
+$("#shareBtn").onclick = async () => {
+  const text = `나의 콩글리시 지수는 ${result.index}%! 「${result.t.name}」 너도 해 봐!`;
+  if (navigator.share) { try { await navigator.share({title:"나의 콩글리시 지수 테스트", text, url:CONFIG.SITE_URL}); } catch(_){} return; }
+  try { await navigator.clipboard.writeText(`${text} ${CONFIG.SITE_URL}`); toast("링크를 복사했어요!"); } catch(_) { prompt("이 주소를 복사해 주세요", CONFIG.SITE_URL); }
+};
+
+/* 결과 그림 만들기 (1080×1350, 인스타그램 세로) */
+const loadImg = src => new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = no; im.src = src; });
+function wrap(ctx, text, x, y, maxW, lh){
+  let line = "", lines = [];
+  for (const w of text.split(" ")) { const t = line ? line+" "+w : w; if (ctx.measureText(t).width > maxW && line) { lines.push(line); line = w; } else line = t; }
+  if (line) lines.push(line);
+  lines.forEach((l,k) => ctx.fillText(l, x, y + k*lh)); return lines.length;
+}
+function rr(ctx,x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+$("#saveBtn").onclick = async () => {
+  try {
+    await Promise.all([document.fonts.load('800 40px "NSR"'), document.fonts.load('400 40px "NSR"')]);
+    const [ch, cover] = await Promise.all([loadImg(result.t.img), loadImg("assets/cover.jpg")]);
+    const cv = $("#cv"), c = cv.getContext("2d"), F = (w,s) => `${w} ${s}px "NSR", sans-serif`;
+    c.fillStyle = "#ffe14d"; c.fillRect(0,0,1080,1350);
+    c.fillStyle = "#fff"; rr(c,60,60,960,1230,48); c.fill();
+    c.textAlign = "center"; c.fillStyle = "#1f2a5a";
+    c.fillStyle = "#1f2a5a"; rr(c,370,110,340,64,32); c.fill();
+    c.fillStyle = "#fff"; c.font = F(800,32); c.fillText("나의 콩글리시 지수", 540, 154);
+    c.fillStyle = "#ff7a2f"; c.font = F(800,180); c.fillText(result.index + "%", 540, 350);
+    c.fillStyle = "#7a809a"; c.font = F(400,34); c.fillText(`10문제 중 ${result.score}문제 정답`, 540, 410);
+    const s = Math.min(640/ch.width, 290/ch.height); c.drawImage(ch, 540-ch.width*s/2, 445 + (290-ch.height*s)/2, ch.width*s, ch.height*s);
+    c.fillStyle = "#1f2a5a"; c.font = F(800,54); c.fillText(result.t.name, 540, 806, 900);
+    c.font = F(400,32); c.fillStyle = "#3a4270"; const n = wrap(c, result.t.desc, 540, 866, 840, 46);
+    const by = 866 + (n-1)*46 + 30;
+    c.fillStyle = "#e8f0ff"; rr(c,120,by,840,80,26); c.fill();
+    c.fillStyle = "#1f4f9e"; c.font = F(800,29); c.fillText("코리: " + result.t.kory, 540, by+51, 800);
+    const cy = Math.max(1130, by + 104); c.drawImage(cover, 130, cy, 92, 128);
+    c.textAlign = "left"; c.fillStyle = "#1f2a5a"; c.font = F(800,34); c.fillText("『파이팅은 영어로 유 캔 두 잇!』", 250, cy+50);
+    c.fillStyle = "#7a809a"; c.font = F(400,28); c.fillText("손지은 글 · 이창우 그림 · 사계절", 250, cy+92);
+    c.fillText(CONFIG.SITE_URL.replace(/^https?:\/\//,"").replace(/\/$/,""), 250, cy+128);
+    const url = cv.toDataURL("image/png");
+    $("#modalImg").src = url; $("#modalDown").href = url;
+    $("#modalDown").classList.remove("hidden"); $("#modalTxt").classList.remove("hidden");
+    $("#modal").classList.remove("hidden");
+  } catch(e) { toast("그림을 만들지 못했어요. 화면을 캡처해 주세요!"); console.log(e); }
+};
+
+/* 크게 보기 */
+function openModal(src){ $("#modalImg").src = src; $("#modalDown").classList.add("hidden"); $("#modalTxt").classList.add("hidden"); $("#modal").classList.remove("hidden"); }
+$("#modalClose").onclick = () => $("#modal").classList.add("hidden");
+$("#modal").onclick = e => { if (e.target.id === "modal") $("#modal").classList.add("hidden"); };
+
+/* ───────── 서평단 신청 ───────── */
+const GRADES = {보호자:["초등 3학년","초등 4학년","초등 5학년","초등 6학년","초등 1~2학년","자녀가 둘 이상(신청 이유에 적어 주세요)"],
+                교사:["3~4학년 담임","5~6학년 담임","영어 전담","기타(신청 이유에 적어 주세요)"]};
+function fillGrades(){
+  const role = document.querySelector('input[name=role]:checked').value;
+  $("#gradeLabel").innerHTML = (role === "교사" ? "담당 학년" : "자녀 학년") + " <em>*</em>";
+  $("#fGrade").innerHTML = '<option value="">고르세요</option>' + GRADES[role].map(g => `<option>${g}</option>`).join("");
+}
+document.querySelectorAll('input[name=role]').forEach(r => r.onchange = fillGrades); fillGrades();
+$("#applyBtn").onclick = () => {
+  const role = who === "선생님" ? "교사" : "보호자";
+  document.querySelector(`input[name=role][value="${role}"]`).checked = true; fillGrades();
+  if (/^초등 [3-6]학년$/.test(who)) $("#fGrade").value = who;
+  else if (who === "초등 1~2학년") $("#fGrade").value = "초등 1~2학년";
+  show("#sApply");
+};
+$("#backBtn").onclick = $("#doneBack").onclick = () => show("#sResult");
+$("#fPhone").oninput = e => { const d = e.target.value.replace(/\D/g,"").slice(0,11);
+  e.target.value = d.length > 7 ? `${d.slice(0,3)}-${d.slice(3, d.length-4)}-${d.slice(-4)}` : d.length > 3 ? `${d.slice(0,3)}-${d.slice(3)}` : d; };
+
+$("#applyForm").onsubmit = async e => {
+  e.preventDefault();
+  const f = e.target, v = k => (f.elements[k].value || "").trim(), err = $("#formErr");
+  const phone = v("phone").replace(/\D/g,"");
+  const miss = [];
+  if (!v("name")) miss.push("성함");
+  if (phone.length < 10 || phone.length > 11 || !/^01/.test(phone)) miss.push("휴대폰 번호");
+  if (!/^\S+@\S+\.\S+$/.test(v("email"))) miss.push("이메일");
+  if (v("address").length < 8) miss.push("주소");
+  if (!v("grade")) miss.push(f.elements.role.value === "교사" ? "담당 학년" : "자녀 학년");
+  if (!v("channel")) miss.push("서평 올릴 곳");
+  if (!v("account")) miss.push("계정 주소");
+  if (!v("followers")) miss.push("팔로워·이웃 수");
+  if (miss.length) { err.textContent = `다음 항목을 확인해 주세요: ${miss.join(", ")}`; err.classList.remove("hidden"); return; }
+  if (!$("#agreePrivacy").checked || !$("#agreeNotice").checked) { err.textContent = "필수 동의 두 가지에 체크해 주세요."; err.classList.remove("hidden"); return; }
+  if (!applyOpen()) { err.textContent = "서평단 모집 기간이 아니에요."; err.classList.remove("hidden"); return; }
+  if (!CONFIG.SCRIPT_URL) { err.textContent = "(준비 중) 신청서 저장 주소가 아직 연결되지 않았어요."; err.classList.remove("hidden"); return; }
+  err.classList.add("hidden");
+  const btn = $("#submitBtn"); btn.disabled = true; btn.textContent = "보내는 중…";
+  const res = await post({type:"apply", sid:SID, role:f.elements.role.value, name:v("name"), phone, email:v("email"), address:v("address"),
+    grade:v("grade"), channel:v("channel"), account:v("account"), followers:v("followers"), reason:v("reason"), website:v("website"),
+    score:result ? result.score : "", typeName:result ? result.t.name : "",
+    agreePrivacy:$("#agreePrivacy").checked, agreeNotice:$("#agreeNotice").checked});
+  btn.disabled = false; btn.textContent = "신청하기";
+  if (res.ok) { f.reset(); fillGrades(); $("#dupMsg").textContent = res.duplicate ? "같은 번호로 이미 신청하신 기록이 있어요. 한 번만 신청해도 괜찮아요!" : ""; show("#sDone"); }
+  else { err.textContent = res.error === "closed" ? "서평단 모집이 끝났어요." : "보내지 못했어요. 잠시 뒤 다시 눌러 주세요."; err.classList.remove("hidden"); }
+};
+</script>
+</body>
+</html>
