@@ -148,7 +148,7 @@
     <p class="eb hidden" id="applyTitle" style="color:var(--orange);font-size:24px;margin:-2px 0 10px">+ 서평단 모집</p>
     <p class="eb" style="font-size:18px">이 말, 영어일까 콩글리시일까?</p>
     <div class="words"><span>캐리어</span><span>노트북</span><span>샤프</span><span>파이팅</span><span class="q">???</span></div>
-    <p class="muted">미국에서 온 친구 코리에게 날마다 쓰는 말을 해 보세요.<br>코리가 고개를 갸웃할까요, 엄지를 척 들까요?</p>
+    <p class="muted">미국에서 온 친구 코리와 함께<br>나의 콩글리시 지수를 알아봐요!</p>
     <button class="btn orange" id="startBtn" style="margin-top:14px">테스트 시작하기</button>
     <p class="muted small" style="margin-top:12px">어린이 혼자서도, 가족과 함께 풀어도 좋아요.<br>테스트에서는 이름이나 연락처를 묻지 않아요.</p>
   </div>
@@ -159,7 +159,7 @@
   <div class="card center">
     <img src="assets/kory.png" alt="" style="width:34%;max-width:150px">
     <h2 style="margin-top:6px">Hi! 누가 풀고 있나요?</h2>
-    <p class="muted small">학년별로 어떤 콩글리시가 헷갈리는지 알아보려고 해요.<br>이름은 묻지 않아요.</p>
+    <p class="muted small">학년별로 어떤 영어가 헷갈리는지 알아보려고 해요.<br>이름은 묻지 않아요.</p>
     <div class="opts" id="whoOpts" style="grid-template-columns:1fr 1fr"></div>
   </div>
 </section>
@@ -179,7 +179,7 @@
       <div class="say"><img src="assets/kory.png" alt=""><span id="fbKory"></span></div>
       <p id="fbWhy"></p>
       <div class="en"><span class="lbl">진짜 영어</span><b id="fbEn"></b><span class="pr" id="fbPr"></span></div>
-      <div class="row" style="align-items:center"><span class="page" id="fbPage"></span><button class="more" id="noteBtn" style="text-align:right">복희의 필기 보기 ›</button></div>
+      <div class="row" style="align-items:center"><span class="page" id="fbPage"></span><button class="more" id="noteBtn" style="text-align:right">단어&amp;예문 정리 보기 ›</button></div>
       <button class="btn" id="nextBtn" style="margin-top:12px">다음 문제</button>
     </div>
   </div>
@@ -203,7 +203,7 @@
 
   <div class="card cta hidden" id="applyCta">
     <h2>📚 보호자·선생님 서평단 모집</h2>
-    <p>방금 푼 콩글리시들이 책에 다 있어요! 아이와 함께 읽고 서평을 남겨 주실 <b style="color:var(--yellow)">20분</b>을 찾습니다.</p>
+    <p>방금 푼 문제 속 콩글리시와 진짜 영어 표현이 『파이팅은 영어로 유 캔 두 잇!』에 다 있어요! 아이와 함께 읽고 서평을 남겨 주실 <b style="color:var(--yellow)">20분</b>을 찾습니다.</p>
     <ul class="small">
       <li>모집: <span id="ctaPeriod"></span></li>
       <li>대상: 초등 3~6학년 자녀를 둔 보호자, 초등 선생님 20분</li>
@@ -219,7 +219,7 @@
 
   <div class="card">
     <h2>문제 다시 보기</h2>
-    <p class="muted small" style="margin:0">번호를 누르면 정답과 책 속 장면을 다시 볼 수 있어요.</p>
+    <p class="muted small" style="margin:0">단어를 누르면 해설과 책 속 장면을 다시 볼 수 있어요.</p>
     <div class="marks" id="marks"></div>
     <div class="review hidden" id="review"></div>
   </div>
@@ -357,7 +357,7 @@ const QUESTIONS = [
    sent:"Do you want to use my <b>____</b>?",
    opts:["laptop","notebook","note computer","book PC"],
    kory:"“notebook? 나도 있어.”",
-   why:"영어 notebook은 보통 ‘공책’이에요. 휴대용 컴퓨터는 무릎(lap) 위(top)에 올려놓고 쓴다고 해서 laptop이라고 해요.",
+   why:"영어 notebook은 보통 ‘공책’을 뜻해요. 휴대용 컴퓨터는 무릎(lap) 위(top)에 올려놓고 쓴다고 해서 laptop이라고 해요.",
    en:"laptop", pr:"랩탑"},
   {ko:"샤프", ch:25, page:62,
    q:"“선생님이 샤프 말고 연필을 쓰라고 하셨어.” 여기서 ‘샤프’를 영어로 하면?",
@@ -373,7 +373,7 @@ const QUESTIONS = [
    why:"핸드폰은 손(hand)과 전화기(phone)를 합쳐 만든 콩글리시예요. 영어로는 cell phone이라고 하고, 스마트폰은 그대로 smartphone이라고 해요.",
    en:"cell phone / smartphone", pr:"셀 폰 / 스마트폰"},
   {ko:"린스", ch:8, page:28,
-   q:"코리에게 욕실을 안내하는 복희. “이건 샴푸, 그리고 이게 린스야!” 린스를 영어로 하면?",
+   q:"코리에게 욕실을 안내하고 싶어요. “이건 샴푸, 그리고 이게 린스야!” 린스를 영어로 하면?",
    opts:["conditioner","rinse","hair soft","shampoo two"],
    kory:"“응? 헹구는 게 린스라고?”",
    why:"영어 rinse는 ‘물로 헹구다’라는 뜻이에요. 샴푸 뒤에 바르는 린스는 영어로 conditioner라고 해요.",
@@ -398,7 +398,7 @@ const QUESTIONS = [
    why:"러닝머신은 영어처럼 보이지만 콩글리시예요. 실내에서 걷거나 뛰는 운동 기구는 treadmill이라고 해요.",
    en:"treadmill", pr:"트레드밀"},
   {ko:"스카프", ch:16, page:44, ox:true,
-   q:"마지막 문제! “난 scarf를 살 거야.” 코리는 겨울 목도리를 사려는 거였어요. 영어 scarf는 얇은 스카프뿐 아니라 목도리까지 가리키는 말이다?",
+   q:"스카프와 목도리는 영어로 scarf라고 한다?",
    opts:["⭕","❌"],
    kory:"“저거 말고, 겨울에 하는 scarf!”",
    why:"함정 문제였어요! 스카프는 콩글리시가 아니라 영어로도 그대로 통해요. 다만 영어 scarf는 목에 두르는 것을 모두 가리켜서, 겨울 목도리도 scarf라고 해요.",
@@ -523,7 +523,7 @@ function finish(){
   $("#eventText").textContent = inRange(CONFIG.EVENT_START, CONFIG.EVENT_END)
     ? `지금 진행 중! 우리 집에서 쓰는 콩글리시를 인어 인스타그램에 알려 주세요. (${md(CONFIG.EVENT_START)}~${md(CONFIG.EVENT_END)})`
     : now() < new Date(CONFIG.EVENT_START)
-      ? `“엄마는 구경만 하는 걸 ‘아이쇼핑’이라고 해요!” 우리 집 콩글리시를 찾아 주세요. ${md(CONFIG.EVENT_START)}부터 인어 인스타그램에서 이벤트가 열려요.`
+      ? `“엄마는 구경만 하는 걸 ‘아이쇼핑’이라고 해요!” 우리 집에서 쓰는 콩글리시를 찾아 주세요. ${md(CONFIG.EVENT_START)}부터 인어 인스타그램에서 이벤트가 열려요.`
       : "우리 집에도 콩글리시가 숨어 있을지 몰라요. 가족과 함께 찾아보세요!";
   show("#sResult");
   post({type:"result", sid:SID, attempt, test:IS_TEST, score, typeName:t.name, answers,
@@ -534,7 +534,7 @@ function showReview(i){
   r.innerHTML = `<p class="eb" style="margin:0 0 8px">Q${i+1}. ${q.ko} — <span style="color:var(--${ok?"green":"red"})">${ok?"정답":"오답"}</span></p>
     <img class="comic" id="rvComic" alt=""><div class="say"><img src="assets/kory.png" alt=""><span id="rvKory"></span></div>
     <p id="rvWhy"></p><div class="en"><span class="lbl">진짜 영어</span><b id="rvEn"></b><span class="pr" id="rvPr"></span></div>
-    <div class="row" style="align-items:center"><span class="page" id="rvPage"></span><button class="more" id="rvNote" style="text-align:right">복희의 필기 보기 ›</button></div>`;
+    <div class="row" style="align-items:center"><span class="page" id="rvPage"></span><button class="more" id="rvNote" style="text-align:right">단어&amp;예문 정리 보기 ›</button></div>`;
   fillExplain(q, "#rvComic", "#rvKory", "#rvWhy", "#rvEn", "#rvPr", "#rvPage");
   $("#rvNote").onclick = () => openModal(`assets/k${String(i+1).padStart(2,"0")}.jpg`);
   r.classList.remove("hidden"); r.scrollIntoView({behavior:"smooth", block:"start"});
